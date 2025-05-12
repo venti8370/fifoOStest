@@ -1,0 +1,42 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Clinic Queue</title>
+    <link rel="stylesheet" href="fcfs.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <header>
+          <h1>Clinic Queue</h1>
+          <p>First-Come, First-Served</p>
+        </header>
+        <div class="input-group">
+          <input type="text" id="nameInput" placeholder="Patient Name" />
+          <button onclick="addPatient()">Join Queue</button>
+        </div>
+        <div class="status" id="servedPatient"></div>
+        <h2>Current Queue</h2>
+        <div class="table-container">
+          <table id="queueTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Time Arrived</th>
+              </tr>
+            </thead>
+            <tbody id="queueBody"></tbody>
+          </table>
+        </div>
+        <button class="call-next" onclick="servePatient()">Call Next</button>
+      </div>
+    </div>
+    <!-- Firebase Compat SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="fcfs.js"></script>
+  </body>
+  </html>
